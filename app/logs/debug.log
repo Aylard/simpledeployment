@@ -1,0 +1,22 @@
+=== Server started on 3000 ===
+
+>> Starting request: 
+
+.. URL: 
+== INDEX request
+.. Trying to load file: /usr/src/app/static/index.html
+<< request ended
+
+>> Starting request: static/app.css
+
+.. URL: static/app.css
+== STATIC request
+.. Trying to load file: /usr/src/app/static/app.css
+<< request ended
+
+>> Starting request: static/penguin.png
+
+.. URL: static/penguin.png
+== STATIC request
+.. Trying to load file: /usr/src/app/static/penguin.png
+<< request ended
