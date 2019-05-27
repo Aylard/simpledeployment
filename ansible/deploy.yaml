@@ -1,0 +1,26 @@
+---
+- hosts: webhosts
+  become: yes
+  remote_user: root
+  vars_prompt:
+    - name: "deployment_password"
+      prompt: "What password to use for new user?"
+      private: yes
+      encrypt: "sha512_crypt"
+      confirm: yes
+      salt_size: 7
+  var_files:
+    - vars.yaml
+  roles:
+    - {
+        role: docker
+      }
+    - {
+        role: wahidsadik.ansible-role-harden-ubuntu,
+        public_keys: [
+          '~/.ssh/id_rsa.pub'
+        ]
+      }
+    - {
+        role: appstart
+      }
