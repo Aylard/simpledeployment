@@ -1,0 +1,14 @@
+enable_auto_update: True
+enable_fail2ban: True
+enable_ufw: True
+
+add_deployment_user: True
+deployment_user: deployer
+deployment_group: deployer
+
+enable_stop_password_authentication: True
+enable_stop_root_login: True
+
+logs_path: /opt/applogs  # this should be changed to mountable resource
+app_container_name: helloworldapp
+app_image_url: dockerhub.com/foo/bar:latest

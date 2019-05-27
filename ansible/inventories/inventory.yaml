@@ -1,0 +1,5 @@
+---
+webhosts:
+  hosts:
+    host1: 127.0.0.1
+    host2: 127.0.0.1

@@ -14,6 +14,10 @@ Simple deployment and configuration project
 - Terraform: Creating NSG
 - Terraform: Creating 2 VMs
 - Terraform: Create LoadBalancer
+- Ansible: Hardening role
+- Ansible: Docker service install role
+- Ansible: App Start role
+- Ansible: Deploy playbook
 
 ## Requirements:
 - Terraform user in AWS with proper policy
@@ -44,3 +48,6 @@ terraform import aws_dynamodb_table.terraform_state terraform_state
 7. Do `terraform apply`
 
 ## Ansible
+1. Fulfil required things in variables (like ssh key) and inventory
+2. Do `ansible-galaxy install -r requirements.yml`
+3. Do `cd ansible && ansible-playbook deploy.yaml`
